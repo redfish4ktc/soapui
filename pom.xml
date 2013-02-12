@@ -15,4 +15,38 @@
         <!-- <module>soapui-maven-plugin-tester</module>  -->
     </modules>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>    
+    
+     <repositories>
+        <repository>
+            <id>eviware</id>
+            <name>Eviware Maven2 Repository</name>
+            <url>http://www.eviware.com/repository/maven2</url>
+        </repository>
+<!--        
+        <repository>
+            <id>central</id>
+            <name>Central Maven2 Repository</name>
+            <url>http://repo1.maven.org/maven2</url>
+        </repository>
+         -->
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>googlecode-maven-install4j</id>
+            <name>googlecode-maven-install4j</name>
+            <url>http://maven-install4j.googlecode.com/svn/m2-repo</url>
+        </pluginRepository>
+        <pluginRepository>
+          <id>eviwarePluginRepository</id>
+          <url>http://www.eviware.com/repository/maven2</url>
+        </pluginRepository>
+    </pluginRepositories>
+    <scm>
+        <connection>scm:git:git://github.com/SmartBear/soapui.git</connection>
+    </scm>
+    
 </project>

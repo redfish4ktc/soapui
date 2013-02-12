@@ -20,32 +20,7 @@
         <version>4.5.2-SNAPSHOT</version>
     </parent>
 
-    <repositories>
-        <repository>
-            <id>eviware</id>
-            <name>Eviware Maven2 Repository</name>
-            <url>http://www.eviware.com/repository/maven2</url>
-        </repository>
-        <repository>
-            <id>central</id>
-            <name>Central Maven2 Repository</name>
-            <url>http://repo1.maven.org/maven2</url>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>googlecode-maven-install4j</id>
-            <name>googlecode-maven-install4j</name>
-            <url>http://maven-install4j.googlecode.com/svn/m2-repo</url>
-        </pluginRepository>
-    </pluginRepositories>
-    <scm>
-        <connection>scm:git:git://github.com/SmartBear/soapui.git</connection>
-    </scm>
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
         <!-- Custom properties -->
         <project.name.full>${project.artifactId}-${project.version}</project.name.full>
         <assembly.build.directory>${project.build.directory}/assemblies</assembly.build.directory>

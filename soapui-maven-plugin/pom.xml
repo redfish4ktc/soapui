@@ -15,24 +15,24 @@
         <version>4.5.2-SNAPSHOT</version>
     </parent>
 
-    <properties>
+<!--     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    </properties>
+    </properties> -->
 
-    <repositories>
+<!--     <repositories>
 		<repository>
 			<id>eviwareRepository</id>
 			<url>http://www.eviware.com/repository/maven2</url>
 		</repository>
-	</repositories>
+	</repositories> -->
 	
-    <pluginRepositories>
+<!--     <pluginRepositories>
 		<pluginRepository>
 			<id>eviwarePluginRepository</id>
 			<url>http://www.eviware.com/repository/maven2</url>
 		</pluginRepository>
-	</pluginRepositories>
+	</pluginRepositories> -->
 
     <dependencies>
 		<dependency>
