@@ -3,7 +3,6 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-	<groupId>com.smartbear.soapui</groupId>
 	<artifactId>maven-soapui-plugin</artifactId>
     <name>soapUI Maven plugin</name>
     <description>Maven 2 project for building a soapUI plugin that is compatible with both Maven 1.x and Maven 2.x.</description>
@@ -14,25 +13,6 @@
         <artifactId>soapui-project</artifactId>
         <version>4.5.2-SNAPSHOT</version>
     </parent>
-
-<!--     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    </properties> -->
-
-<!--     <repositories>
-		<repository>
-			<id>eviwareRepository</id>
-			<url>http://www.eviware.com/repository/maven2</url>
-		</repository>
-	</repositories> -->
-	
-<!--     <pluginRepositories>
-		<pluginRepository>
-			<id>eviwarePluginRepository</id>
-			<url>http://www.eviware.com/repository/maven2</url>
-		</pluginRepository>
-	</pluginRepositories> -->
 
     <dependencies>
 		<dependency>
