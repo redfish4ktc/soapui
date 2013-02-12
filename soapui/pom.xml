@@ -25,6 +25,7 @@
         <assembly.build.directory>${project.build.directory}/assemblies</assembly.build.directory>
         <installer.build.directory>${project.build.directory}/install4j</installer.build.directory>
         <build.date>${maven.build.timestamp}</build.date>
+        <version_flex-messaging>1.0</version_flex-messaging>
     </properties>
 
     <build>
@@ -630,30 +631,31 @@
             <artifactId>hermes</artifactId>
             <version>1.14</version>
         </dependency>
+<!-- flex-messaging not in central, I did not find any 1.0 version of blazeDS, need more investigations -->
         <dependency>
             <groupId>amf</groupId>
             <artifactId>flex-messaging-common</artifactId>
-            <version>1.0</version>
+            <version>${version_flex-messaging}</version>
         </dependency>
         <dependency>
             <groupId>amf</groupId>
             <artifactId>flex-messaging-core</artifactId>
-            <version>1.0</version>
+            <version>${version_flex-messaging}</version>
         </dependency>
         <dependency>
             <groupId>amf</groupId>
             <artifactId>flex-messaging-opt</artifactId>
-            <version>1.0</version>
+            <version>${version_flex-messaging}</version>
         </dependency>
         <dependency>
             <groupId>amf</groupId>
             <artifactId>flex-messaging-proxy</artifactId>
-            <version>1.0</version>
+            <version>${version_flex-messaging}</version>
         </dependency>
         <dependency>
             <groupId>amf</groupId>
             <artifactId>flex-messaging-remoting</artifactId>
-            <version>1.0</version>
+            <version>${version_flex-messaging}</version>
         </dependency>
         <dependency>
             <groupId>com.thoughtworks.xstream</groupId>
