@@ -373,7 +373,7 @@
         </dependency>
 
         <!-- JGoodies -->
-
+<!-- OK, in maven central -->
         <dependency>
             <groupId>com.jgoodies</groupId>
             <artifactId>forms</artifactId>
@@ -390,6 +390,7 @@
             <version>2.0.1</version>
         </dependency>
         <!-- TODO CHeck version of RSyntaxArea, newer in Maven 1 ?? -->
+<!-- exist in maven central, groupId is com.fifesoft, but there are versions 2.0.2 -->
         <dependency>
             <groupId>fife</groupId>
             <artifactId>rsyntaxtextarea</artifactId>
