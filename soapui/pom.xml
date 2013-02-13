@@ -305,21 +305,38 @@ currently, an extra repository must be declared to get this plugin
         </dependency>
 
         <!-- XML Beans -->
-
+<!-- TODO not found in central, SHA-1: bb6ccd60b458d3352cab82e394079c6572cf3c42 -->
         <dependency>
             <groupId>xmlbeans</groupId>
             <artifactId>xbean</artifactId>
             <version>fixed-2.4.0</version>
         </dependency>
+<!-- found in central, SHA-1 06b61168e2f6e3e73e2320542638bd45f48a09a4 -->
         <dependency>
-            <groupId>xmlbeans</groupId>
-            <artifactId>xbean_xpath</artifactId>
+            <groupId>org.apache.xmlbeans</groupId>
+            <artifactId>xmlbeans-xpath</artifactId>
             <version>2.4.0</version>
             <type>jar</type>
         </dependency>
+
+<!-- found in central, SHA-1 1f3ce14cd3af5732dad86871f6f4c43e55379ac4 -->
+<!--
+TODO fix duplicate xmlbeans:xbean:fixed-2.4.0 and net.sourceforge.saxon:saxon:9.1.0.8
+TODO net.sf.saxon:saxon:9 dependency is not available on central
         <dependency>
-            <groupId>xmlbeans</groupId>
-            <artifactId>xmlpublic</artifactId>
+            <groupId>org.apache.xmlbeans</groupId>
+            <artifactId>xmlbeans</artifactId>
+            <version>2.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.saxon</groupId>
+            <artifactId>saxon</artifactId>
+            <version>9</version>
+        </dependency>
+-->
+        <dependency>
+            <groupId>org.apache.xmlbeans</groupId>
+            <artifactId>xmlbeans-xmlpublic</artifactId>
             <version>2.4.0</version>
         </dependency>
         <dependency>
