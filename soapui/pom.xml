@@ -536,8 +536,9 @@
             <artifactId>wsdl4j</artifactId>
             <version>1.6.2-fixed</version>
         </dependency>
+<!-- update groupId as check with SHA-1 signature on central match(http://search.maven.org/#search%7Cga%7C1%7C1%3A%22325f6743e2747b3e886897e3eea810db11ede393%22) -->
         <dependency>
-            <groupId>commons-ssl</groupId>
+            <groupId>ca.juliusdavies</groupId>
             <artifactId>not-yet-commons-ssl</artifactId>
             <version>0.3.11</version>
         </dependency>
