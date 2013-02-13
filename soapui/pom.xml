@@ -601,14 +601,16 @@ Artifact in soapui repository does not declare any dependencies
             <version>1.7R2</version>
         </dependency>
         <dependency>
-            <groupId>saxon</groupId>
+            <groupId>net.sourceforge.saxon</groupId>
             <artifactId>saxon</artifactId>
-            <version>9.1.0.8j</version>
+            <version>9.1.0.8</version>
         </dependency>
+<!-- update groupId and version as check with SHA-1 signature on central match(http://search.maven.org/#search%7Cga%7C1%7C1%3A%229ffdd08cb74563cbd431c845238b414e933a0483%22) -->
+<!-- update groupId and version as check with SHA-1 signature on central match(http://search.maven.org/#search%7Cga%7C1%7C1%3A%22d3bc6741b15bb4c57626708287a2417ab5f67ee6%22) -->
         <dependency>
-            <groupId>saxon</groupId>
-            <artifactId>saxon-dom</artifactId>
-            <version>9.1.0.8j</version>
+            <groupId>net.sourceforge.saxon</groupId>
+            <artifactId>saxon</artifactId>
+            <version>9.1.0.8</version>
         </dependency>
         <dependency>
             <groupId>xmlunit</groupId>
