@@ -157,6 +157,9 @@
                 </configuration>
             </plugin>
 
+<!-- TODO why not using sonatype implementation of the plugin which is on central (http://search.maven.org/#search%7Cga%7C1%7Cinstall4j)?
+currently, an extra repository must be declared to get this plugin
+ -->
             <plugin>
                 <groupId>com.google.code.maven-install4j</groupId>
                 <artifactId>maven-install4j-plugin</artifactId>
@@ -381,18 +384,20 @@
             <artifactId>forms</artifactId>
             <version>1.0.7</version>
         </dependency>
+<!-- OK, in maven central -->
         <dependency>
             <groupId>com.jgoodies</groupId>
             <artifactId>looks</artifactId>
             <version>2.2.0</version>
         </dependency>
+<!-- OK, in maven central -->
         <dependency>
             <groupId>com.jgoodies</groupId>
             <artifactId>binding</artifactId>
             <version>2.0.1</version>
         </dependency>
         <!-- TODO CHeck version of RSyntaxArea, newer in Maven 1 ?? -->
-<!-- exist in maven central, groupId is com.fifesoft, but there are versions 2.0.2 -->
+<!-- TODO exist in maven central, groupId is com.fifesoft, but there are no 2.0.1 version (available versions: 2.0.0-beta2, 2.0.2) -->
         <dependency>
             <groupId>fife</groupId>
             <artifactId>rsyntaxtextarea</artifactId>
@@ -476,6 +481,7 @@
             <artifactId>htmlunit</artifactId>
             <version>2.7</version>
         </dependency>
+<!-- OK in central -->
         <dependency>
             <groupId>org.w3c.css</groupId>
             <artifactId>sac</artifactId>
@@ -531,6 +537,9 @@
             <artifactId>mail</artifactId>
             <version>1.4</version>
         </dependency>
+<!-- TODO found what as been modified (there is a 1.6.2 version in central)
+SHA-1 checksum is bc06781a348e5e614b282d68204f67d159006768 and cannot be found in central
+-->
         <dependency>
             <groupId>wsdl4j</groupId>
             <artifactId>wsdl4j</artifactId>
@@ -580,6 +589,9 @@ Artifact in soapui repository does not declare any dependencies
                 </exclusion>
             </exclusions>
         </dependency>
+<!-- TODO found what as been modified
+SHA-1 checksum is 84530396a238a8f431f8c00a28f1327b3309c7ac and cannot be found in central
+-->
         <dependency>
             <groupId>swingx</groupId>
             <artifactId>swingx</artifactId>
@@ -595,6 +607,7 @@ Artifact in soapui repository does not declare any dependencies
             <artifactId>groovy-all</artifactId>
             <version>1.8.0</version>
         </dependency>
+<!-- OK in central -->
         <dependency>
             <groupId>rhino</groupId>
             <artifactId>js</artifactId>
