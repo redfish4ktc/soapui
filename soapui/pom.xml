@@ -27,6 +27,7 @@
         <build.date>${maven.build.timestamp}</build.date>
         <version_flex-messaging>1.0</version_flex-messaging>
         <version_httpcomponent>4.1.1</version_httpcomponent>
+        <version_xalan>2.7.1</version_xalan>
     </properties>
 
     <build>
@@ -236,6 +237,7 @@ currently, an extra repository must be declared to get this plugin
             <plugin>
                 <groupId>net.ju-n.maven.plugins</groupId>
                 <artifactId>maven-checksum-plugin</artifactId>
+                <!-- TODO upgrade to version 1.2 -->
                 <version>1.0</version>
                 <configuration>
                     <!-- TODO parameterize this better-->
@@ -634,7 +636,7 @@ SHA-1 checksum is 84530396a238a8f431f8c00a28f1327b3309c7ac and cannot be found i
         <dependency>
             <groupId>xalan</groupId>
             <artifactId>xalan</artifactId>
-            <version>2.7.1</version>
+            <version>${version_xalan}</version>
         </dependency>
 <!-- update groupId and version as check SHA-1 checksum matches on central match(http://search.maven.org/#search%7Cga%7C1%7C1%3A%2263102221970b8471b1dd2a5bfe36fd2ab1f5c516%22) -->
         <dependency>
@@ -702,19 +704,25 @@ SHA-1 checksum is 84530396a238a8f431f8c00a28f1327b3309c7ac and cannot be found i
         </dependency>
 
         <!--- Added -->
-
+<!-- OK in central -->
         <dependency>
             <groupId>org.samba.jcifs</groupId>
             <artifactId>jcifs</artifactId>
             <version>1.2.9</version>
             <type>jar</type>
         </dependency>
+<!-- SHA-1 9f4de726a6b6e1cdde725e6b58908753b27d5363 not found in central
+version 6.9.1 exist in central: http://search.maven.org/#artifactdetails%7Ccom.l2fprod.common%7Cl2fprod-common-directorychooser%7C6.9.1%7Cjar
+-->
         <dependency>
             <groupId>l2fprod</groupId>
             <artifactId>l2fprod-common-directorychooser
             </artifactId>
             <version>7.3</version>
         </dependency>
+<!-- SHA-1 83b5394cfc406e0d759f52cb3ef4a9eab9f008ed
+version 6.9.1 exist in central: http://search.maven.org/#artifactdetails%7Ccom.l2fprod.common%7Cl2fprod-common-fontchooser%7C6.9.1%7Cjar
+-->
         <dependency>
             <groupId>l2fprod</groupId>
             <artifactId>l2fprod-common-fontchooser</artifactId>
@@ -747,9 +755,10 @@ Before modifying the groupId, there were 2 versions of xml-apis. The other one w
         <dependency>
             <groupId>xalan</groupId>
             <artifactId>serializer</artifactId>
-            <version>2.7.1</version>
+            <version>${version_xalan}</version>
             <type>jar</type>
         </dependency>
+<!-- TODO does not exist in central -->
         <dependency>
             <groupId>gnu.cajo</groupId>
             <artifactId>cajo</artifactId>
