@@ -25,6 +25,7 @@
         <assembly.build.directory>${project.build.directory}/assemblies</assembly.build.directory>
         <installer.build.directory>${project.build.directory}/install4j</installer.build.directory>
         <build.date>${maven.build.timestamp}</build.date>
+        <!-- TODO actual version found in all META-INF files is 3.2.0.3978 -->
         <version_flex-messaging>1.0</version_flex-messaging>
         <version_httpcomponent>4.1.1</version_httpcomponent>
         <version_xalan>2.7.1</version_xalan>
