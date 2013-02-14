@@ -125,6 +125,8 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <!-- TODO configure failsafe executions with profile (whole declaration, or skip parameter value changes according to the profile) -->
+                    <skip>false</skip>
                     <systemProperties>
                         <soapui.log4j.config>${project.build.testOutputDirectory}/config/soapui-test-log4j.xml</soapui.log4j.config>
                     </systemProperties>
@@ -284,6 +286,135 @@ currently, an extra repository must be declared to get this plugin
                     <generateHTMLTableOnlyChangeLog>false</generateHTMLTableOnlyChangeLog>
                     <generateSimpleHTMLChangeLog>true</generateSimpleHTMLChangeLog>
                 </configuration>
+            </plugin>
+
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-dependency-plugin</artifactId>
+              <version>2.6</version>
+              <configuration>
+                <skip>false</skip>
+                <failOnWarning>false</failOnWarning>
+                <ignoreNonCompile>false</ignoreNonCompile>
+              </configuration>
+              <executions>
+                <execution>
+                  <id>default</id>
+                  <phase>verify</phase>
+                  <goals>
+                    <goal>analyze-only</goal>
+                    <goal>analyze-duplicate</goal>
+                    <!-- <goal>analyze-dep-mgt</goal> -->
+                  </goals>
+                </execution>
+              </executions>
+            </plugin>
+
+            <plugin>
+              <groupId>com.ning.maven.plugins</groupId>
+              <artifactId>maven-dependency-versions-check-plugin</artifactId>
+              <version>2.0.2</version>
+              <configuration>
+                <skip>t</skip>
+                <failBuildInCaseOfConflict>false</failBuildInCaseOfConflict>
+                <failOnWarning>false</failOnWarning>
+              </configuration>
+              <executions>
+                <execution>
+                  <id>default</id>
+                  <phase>verify</phase>
+                  <goals>
+                    <goal>check</goal>
+                  </goals>
+                </execution>
+              </executions>
+            </plugin>
+
+            <plugin>
+              <groupId>com.github.goldin</groupId>
+              <artifactId>duplicates-finder-plugin</artifactId>
+              <version>0.2.5</version>
+              <executions>
+                <execution>
+                  <id>default</id>
+                  <phase>verify</phase>
+                  <goals>
+                    <goal>find-duplicates</goal>
+                  </goals>
+                </execution>
+              </executions>
+              <configuration>
+                <verbose>false</verbose>
+                <fail>false</fail>
+                <scopes>compile, test, runtime, provided</scopes>
+              </configuration>
+            </plugin>
+            
+            <plugin>
+              <groupId>com.ning.maven.plugins</groupId>
+              <artifactId>maven-duplicate-finder-plugin</artifactId>
+              <version>1.0.4</version>
+              <executions>
+                <execution>
+                  <id>default</id>
+                  <phase>verify</phase>
+                  <goals>
+                    <goal>check</goal>
+                  </goals>
+                </execution>
+              </executions>
+              <configuration>
+                <skip>true</skip>
+                <failBuildInCaseOfConflict>false</failBuildInCaseOfConflict>
+          <!-- from https://github.com/facebook/facebook-oss-pom
+                <exceptions combine.children="append">
+                  <!- - Well done, Apache... - ->
+                  <exception>
+                    <conflictingDependencies>
+                      <dependency>
+                        <groupId>commons-beanutils</groupId>
+                        <artifactId>commons-beanutils</artifactId>
+                      </dependency>
+                      <dependency>
+                        <groupId>commons-beanutils</groupId>
+                        <artifactId>commons-beanutils-core</artifactId>
+                      </dependency>
+                      <dependency>
+                        <groupId>commons-collections</groupId>
+                        <artifactId>commons-collections</artifactId>
+                      </dependency>
+                    </conflictingDependencies>
+                    <classes>
+                      <class>org.apache.commons.collections.ArrayStack</class>
+                      <class>org.apache.commons.collections.Buffer</class>
+                      <class>org.apache.commons.collections.BufferUnderflowException</class>
+                      <class>org.apache.commons.collections.FastHashMap</class>
+                    </classes>
+                  </exception>
+                  <exception>
+                    <conflictingDependencies>
+                      <dependency>
+                        <groupId>commons-beanutils</groupId>
+                        <artifactId>commons-beanutils</artifactId>
+                      </dependency>
+                      <dependency>
+                        <groupId>commons-beanutils</groupId>
+                        <artifactId>commons-beanutils-core</artifactId>
+                      </dependency>
+                    </conflictingDependencies>
+                    <packages>
+                      <package>org.apache.commons.beanutils</package>
+                    </packages>
+                  </exception>
+                </exceptions> -->
+                <ignoredResources combine.children="append">
+                  <ignoredResource>.*\.html</ignoredResource>
+                  <ignoredResource>META-INF/.*</ignoredResource>
+                  <ignoredResource>about_files/.*</ignoredResource>
+                  <ignoredResource>plugin\.properties</ignoredResource>
+                  <ignoredResource>.*\.java</ignoredResource>
+                </ignoredResources>
+              </configuration>
             </plugin>
         </plugins>
     </build>
