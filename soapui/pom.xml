@@ -20,6 +20,9 @@
     </parent>
 
     <properties>
+        <!-- TODO use a profile to modify this value -->
+        <skip.integration.test>true</skip.integration.test>
+    
         <!-- Custom properties -->
         <project.name.full>${project.artifactId}-${project.version}</project.name.full>
         <assembly.build.directory>${project.build.directory}/assemblies</assembly.build.directory>
@@ -125,8 +128,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <!-- TODO configure failsafe executions with profile (whole declaration, or skip parameter value changes according to the profile) -->
-                    <skip>false</skip>
+                    <skip>${skip.integration.test}</skip>
                     <systemProperties>
                         <soapui.log4j.config>${project.build.testOutputDirectory}/config/soapui-test-log4j.xml</soapui.log4j.config>
                     </systemProperties>
