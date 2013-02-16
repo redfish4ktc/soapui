@@ -290,6 +290,14 @@ currently, an extra repository must be declared to get this plugin
                 </configuration>
             </plugin>
 
+        </plugins>
+    </build>
+
+  <profiles>
+    <profile>
+      <id>analyze-deps</id>
+        <build>
+          <plugins>
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-dependency-plugin</artifactId>
@@ -302,7 +310,7 @@ currently, an extra repository must be declared to get this plugin
               <executions>
                 <execution>
                   <id>default</id>
-                  <phase>verify</phase>
+                  <phase>validate</phase>
                   <goals>
                     <goal>analyze-only</goal>
                     <goal>analyze-duplicate</goal>
@@ -324,7 +332,7 @@ currently, an extra repository must be declared to get this plugin
               <executions>
                 <execution>
                   <id>default</id>
-                  <phase>verify</phase>
+                  <phase>validate</phase>
                   <goals>
                     <goal>check</goal>
                   </goals>
@@ -339,7 +347,7 @@ currently, an extra repository must be declared to get this plugin
               <executions>
                 <execution>
                   <id>default</id>
-                  <phase>verify</phase>
+                  <phase>validate</phase>
                   <goals>
                     <goal>find-duplicates</goal>
                   </goals>
@@ -359,7 +367,7 @@ currently, an extra repository must be declared to get this plugin
               <executions>
                 <execution>
                   <id>default</id>
-                  <phase>verify</phase>
+                  <phase>validate</phase>
                   <goals>
                     <goal>check</goal>
                   </goals>
@@ -418,9 +426,11 @@ currently, an extra repository must be declared to get this plugin
                 </ignoredResources>
               </configuration>
             </plugin>
-        </plugins>
-    </build>
-
+          </plugins>
+        </build>
+    </profile>
+  </profiles>
+    
     <dependencies>
 
         <!-- Testing -->
