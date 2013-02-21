@@ -19,6 +19,14 @@
         <version>4.5.2-SNAPSHOT</version>
     </parent>
 
+    <pluginRepositories>
+        <pluginRepository>
+            <id>googlecode-maven-install4j</id>
+            <name>googlecode-maven-install4j</name>
+            <url>http://maven-install4j.googlecode.com/svn/m2-repo</url>
+        </pluginRepository>
+    </pluginRepositories>
+
     <properties>
         <!-- TODO use a profile to modify this value -->
         <skip.integration.test>true</skip.integration.test>
