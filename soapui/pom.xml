@@ -39,6 +39,7 @@
         <!-- TODO actual version found in all META-INF files is 3.2.0.3978 -->
         <version_flex-messaging>1.0</version_flex-messaging>
         <version_httpcomponent>4.1.1</version_httpcomponent>
+        <version_slf4j>1.6.1</version_slf4j>
         <version_xalan>2.7.1</version_xalan>
     </properties>
 
@@ -438,9 +439,23 @@ currently, an extra repository must be declared to get this plugin
         </build>
     </profile>
   </profiles>
-    
-    <dependencies>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+          <version>${version_slf4j}</version>
+      </dependency>
+      <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-log4j12</artifactId>
+          <version>${version_slf4j}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+    <dependencies>
         <!-- Testing -->
 
         <dependency>
@@ -546,6 +561,12 @@ TODO net.sf.saxon:saxon:9 dependency is not available on central
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
             <version>1.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <!-- as we have transitive dependencies that use slf4j, we need to provide a slf4j binding. Use log412 as soapui uses log4j internally -->
+            <scope>runtime</scope>
         </dependency>
 
         <!-- JGoodies -->
