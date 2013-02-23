@@ -749,15 +749,6 @@ SHA-1 checksum is bc06781a348e5e614b282d68204f67d159006768 and cannot be found i
             <version>2.2.2</version>
             <classifier>jdk15</classifier>
         </dependency>
-        <dependency>
-<!-- TODO check if this is needed as net.sf.json-lib:json-lib declare ezmorph 1.0.4 as dependency
-Artifact in soapui repository does not declare any dependencies
--->
-<!-- update groupId as check with SHA-1 signature on central match(http://search.maven.org/#search%7Cga%7C1%7C1%3A%222908fad8178f53d55ee8ce5e6d14feb4d78d5e38%22) -->
-            <groupId>net.sf.ezmorph</groupId>
-            <artifactId>ezmorph</artifactId>
-            <version>1.0.5</version>
-        </dependency>
 <!-- in maven central, check with SHA-1(see http://search.maven.org/#search%7Cga%7C1%7C1%3A%226705564269d976dbc0d869b58aca25290c0eb4cb%22) -->       
         <dependency>
             <groupId>xom</groupId>
