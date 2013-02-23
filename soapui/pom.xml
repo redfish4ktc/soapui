@@ -913,11 +913,7 @@ version 6.9.1 exist in central: http://search.maven.org/#artifactdetails%7Ccom.l
             <artifactId>l2fprod-common-fontchooser</artifactId>
             <version>7.3</version>
         </dependency>
-        <dependency>
-            <groupId>org.apache.santuario</groupId>
-            <artifactId>xmlsec</artifactId>
-            <version>1.4.5</version>
-        </dependency>
+
 <!--
 update groupId and version as check with SHA-1 signature on central match(http://search.maven.org/#search%7Cga%7C1%7C1%3A%2290b215f48fe42776c8c7f6e3509ec54e84fd65ef%22)
 
