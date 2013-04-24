@@ -36,14 +36,7 @@
         <assembly.build.directory>${project.build.directory}/assemblies</assembly.build.directory>
         <installer.build.directory>${project.build.directory}/install4j</installer.build.directory>
         <build.date>${maven.build.timestamp}</build.date>
-        <!--
-        actual version found in all META-INF files is 3.2.0.3978
-        search for a 3.2.0.3978 version (https://oss.sonatype.org/index.html#nexus-search;gav~~~3.2.0.3978~~)
-        found artifacts com.adobe.blazeds:blazeds-***
-        TODO verify sha-1
-        TODO if ok, rename this property to reflect this is a blazeds version
-        -->
-        <version_flex-messaging>1.0</version_flex-messaging>
+        <version_blazeds>3.2.0.3978</version_blazeds>
         <version_httpcomponent>4.1.1</version_httpcomponent>
         <version_slf4j>1.6.1</version_slf4j>
         <version_xalan>2.7.1</version_xalan>
@@ -860,35 +853,46 @@ SHA-1 checksum is 84530396a238a8f431f8c00a28f1327b3309c7ac and cannot be found i
             <artifactId>jms</artifactId>
             <version>1.1</version>
         </dependency>
+        <!-- not available in public repo: 831bb2c0c045ace8a88ce2c6038f776c1f2d81a3 -->
         <dependency>
             <groupId>hermesjms</groupId>
             <artifactId>hermes</artifactId>
             <version>1.14</version>
         </dependency>
+        <!-- amf:flex-messaging-common-1.0
+        8cc743f24ff0f1db493c70c158b0459075363c2e -->
         <dependency>
-            <groupId>amf</groupId>
-            <artifactId>flex-messaging-common</artifactId>
-            <version>${version_flex-messaging}</version>
+          <groupId>com.adobe.blazeds</groupId>
+          <artifactId>blazeds-common</artifactId>
+          <version>${version_blazeds}</version>
         </dependency>
+        <!-- amf:flex-messaging-core-1.0
+        d8c7b9ea96680cbe52b16d31365c4cd93a58df92 -->
         <dependency>
-            <groupId>amf</groupId>
-            <artifactId>flex-messaging-core</artifactId>
-            <version>${version_flex-messaging}</version>
+          <groupId>com.adobe.blazeds</groupId>
+          <artifactId>blazeds-core</artifactId>
+          <version>${version_blazeds}</version>
         </dependency>
+        <!-- amf:flex-messaging-opt-1.0
+        cbcbbda606c0eafaa290c359341b20f647f8e75c -->
         <dependency>
-            <groupId>amf</groupId>
-            <artifactId>flex-messaging-opt</artifactId>
-            <version>${version_flex-messaging}</version>
+          <groupId>com.adobe.blazeds</groupId>
+          <artifactId>blazeds-opt</artifactId>
+          <version>${version_blazeds}</version>
         </dependency>
+        <!-- amf:flex-messaging-proxy-1.0
+        00e53347d77c0d5265ad96fecd382019abf582b7 -->
         <dependency>
-            <groupId>amf</groupId>
-            <artifactId>flex-messaging-proxy</artifactId>
-            <version>${version_flex-messaging}</version>
+          <groupId>com.adobe.blazeds</groupId>
+          <artifactId>blazeds-proxy</artifactId>
+          <version>${version_blazeds}</version>
         </dependency>
+        <!-- amf:flex-messaging-remoting-1.0
+        34082c9ff1a5c3da781a097fd3b2c7a46ecc6e14 -->
         <dependency>
-            <groupId>amf</groupId>
-            <artifactId>flex-messaging-remoting</artifactId>
-            <version>${version_flex-messaging}</version>
+          <groupId>com.adobe.blazeds</groupId>
+          <artifactId>blazeds-remoting</artifactId>
+          <version>${version_blazeds}</version>
         </dependency>
         <dependency>
             <groupId>com.thoughtworks.xstream</groupId>
@@ -909,8 +913,7 @@ version 6.9.1 exist in central: http://search.maven.org/#artifactdetails%7Ccom.l
 -->
         <dependency>
             <groupId>l2fprod</groupId>
-            <artifactId>l2fprod-common-directorychooser
-            </artifactId>
+            <artifactId>l2fprod-common-directorychooser</artifactId>
             <version>7.3</version>
         </dependency>
 <!-- SHA-1 83b5394cfc406e0d759f52cb3ef4a9eab9f008ed
