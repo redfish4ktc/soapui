@@ -36,7 +36,13 @@
         <assembly.build.directory>${project.build.directory}/assemblies</assembly.build.directory>
         <installer.build.directory>${project.build.directory}/install4j</installer.build.directory>
         <build.date>${maven.build.timestamp}</build.date>
-        <!-- TODO actual version found in all META-INF files is 3.2.0.3978 -->
+        <!--
+        actual version found in all META-INF files is 3.2.0.3978
+        search for a 3.2.0.3978 version (https://oss.sonatype.org/index.html#nexus-search;gav~~~3.2.0.3978~~)
+        found artifacts com.adobe.blazeds:blazeds-***
+        TODO verify sha-1
+        TODO if ok, rename this property to reflect this is a blazeds version
+        -->
         <version_flex-messaging>1.0</version_flex-messaging>
         <version_httpcomponent>4.1.1</version_httpcomponent>
         <version_slf4j>1.6.1</version_slf4j>
@@ -859,7 +865,6 @@ SHA-1 checksum is 84530396a238a8f431f8c00a28f1327b3309c7ac and cannot be found i
             <artifactId>hermes</artifactId>
             <version>1.14</version>
         </dependency>
-<!-- flex-messaging not in central, I did not find any 1.0 version of blazeDS, need more investigations -->
         <dependency>
             <groupId>amf</groupId>
             <artifactId>flex-messaging-common</artifactId>
